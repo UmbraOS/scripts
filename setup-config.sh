@@ -3,7 +3,7 @@
 # $3 :: Time zone
 
 achroot() {
-  arch-chroot /mnt /bin/bash -c $1
+  arch-chroot /mnt /bin/bash -c "$1"
 }
 
 # Set the language

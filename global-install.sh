@@ -1,5 +1,5 @@
 achroot() {
-  arch-chroot /mnt /bin/bash -c $1
+  arch-chroot /mnt /bin/bash -c "$1"
 }
 
 rsync -a /run/archiso/sfs/airootfs/ /mnt/
