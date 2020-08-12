@@ -4,3 +4,5 @@ parted -s /dev/sda set 1 boot on
 
 mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt
+
+sh /umbra/scripts/post-install.sh
