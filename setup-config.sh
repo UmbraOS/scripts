@@ -16,3 +16,7 @@ achroot "echo 'KEYMAP=$2' > /etc/vconsole.conf"
 
 # Set the time zone
 achroot "ln -sf /usr/share/zoneinfo/$3 /etc/localtime"
+
+# Set the time zone to UTC if the previous one is invalid
+if [ $? -eq 1 ]; then
+  achroot "ln -sf /usr/share/zoneinfo/UTC /etc/localtime"
