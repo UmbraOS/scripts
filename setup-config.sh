@@ -13,6 +13,7 @@ achroot "echo 'LANG=$1' > /etc/locale.conf"
 
 # Set the keyboard layout
 achroot "echo 'KEYMAP=$2' > /etc/vconsole.conf"
+achroot "setxkbmap -layout $2"
 
 # Set the time zone
 achroot "ln -sf /usr/share/zoneinfo/$3 /etc/localtime"
